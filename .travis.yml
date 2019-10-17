@@ -1,8 +1,6 @@
 language: php
 
 php:
-  - 7.0
-  - 7.1
   - 7.2
 
 before_script:
@@ -11,8 +9,7 @@ before_script:
   - php artisan key:generate
   - php artisan migrate
 
-before_install:
-  - mysql -e 'CREATE DATABASE realworld_test;'
+
 
 script:
   - vendor/bin/phpunit
